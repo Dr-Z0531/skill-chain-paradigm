@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Skills Chain Framework · 视觉预览版</title>
+<style>
+  :root{
+    --bg:#050f1c; --bg2:#0a1a2e; --panel:#0c1f36; --line:#1b3a5c;
+    --cyan:#1cd6ff; --purple:#a78bfa; --green:#25d697; --amber:#ffb230;
+    --red:#ff7180; --text:#dbe9f7; --dim:#7d9cbb;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:"Microsoft YaHei","PingFang SC",sans-serif;padding:40px 32px 80px}
+  h1{font-size:26px;font-weight:700;letter-spacing:2px;margin-bottom:6px;
+     background:linear-gradient(90deg,var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .sub{color:var(--dim);font-size:14px;margin-bottom:36px}
+  .card{background:linear-gradient(160deg,var(--panel),var(--bg2));border:1px solid var(--line);
+        border-radius:16px;padding:28px 30px;margin-bottom:32px;position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,var(--cyan),var(--purple),transparent);opacity:.7}
+  .card h2{font-size:18px;color:var(--cyan);margin-bottom:4px;letter-spacing:1px}
+  .card .cap{font-size:13px;color:var(--dim);margin-bottom:18px}
+  svg{display:block;width:100%;height:auto}
+  .legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:14px;font-size:13px;color:var(--dim)}
+  .legend span b{font-weight:600}
+  .tag{display:inline-block;padding:2px 10px;border-radius:20px;font-size:12px;margin-right:8px}
+  .t-cyan{background:rgba(28,214,255,.12);color:var(--cyan);border:1px solid rgba(28,214,255,.3)}
+  .t-purple{background:rgba(167,139,250,.12);color:var(--purple);border:1px solid rgba(167,139,250,.3)}
+  .t-green{background:rgba(37,214,151,.12);color:var(--green);border:1px solid rgba(37,214,151,.3)}
+  .t-amber{background:rgba(255,178,48,.12);color:var(--amber);border:1px solid rgba(255,178,48,.3)}
+  .t-red{background:rgba(255,113,128,.12);color:var(--red);border:1px solid rgba(255,113,128,.3)}
+  .footer{margin-top:24px;color:var(--dim);font-size:13px;text-align:center}
+  @keyframes flow{0%{stroke-dashoffset:0}100%{stroke-dashoffset:-160}}
+  .flowline{stroke-dasharray:10 14;animation:flow 6s linear infinite}
+</style>
+</head>
+<body>
+
+<h1>⚡ Skills Chain Framework</h1>
+<div class="sub">视觉预览版 · 架构 / 闭环 / 状态机 / 生态 · 深色科技风</div>
+
+<!-- ═════════ 图1: 四层架构 ═════════ -->
+<div class="card">
+  <h2>图 1 · 四层架构</h2>
+  <div class="cap">资产池 → 匹配验证 → 工作流 → 治理 · router_log 贯通全层（唯一数据源）</div>
+  <svg viewBox="0 0 960 560" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="layer4" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1cd6ff" stop-opacity=".16"/><stop offset="1" stop-color="#a78bfa" stop-opacity=".16"/></linearGradient>
+      <linearGradient id="layer3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a78bfa" stop-opacity=".14"/><stop offset="1" stop-color="#25d697" stop-opacity=".14"/></linearGradient>
+      <linearGradient id="layer2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#25d697" stop-opacity=".13"/><stop offset="1" stop-color="#ffb230" stop-opacity=".13"/></linearGradient>
+      <linearGradient id="layer1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffb230" stop-opacity=".12"/><stop offset="1" stop-color="#ff7180" stop-opacity=".12"/></linearGradient>
+      <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <!-- 背景网格 -->
+    <g stroke="#0e2a45" stroke-width="1" opacity=".5">
+      <path d="M0 40 H960 M0 120 H960 M0 200 H960 M0 280 H960 M0 360 H960 M0 440 H960 M0 520 H960"/>
+      <path d="M40 0 V560 M120 0 V560 M200 0 V560 M280 0 V560 M360 0 V560 M440 0 V560 M520 0 V560 M600 0 V560 M680 0 V560 M760 0 V560 M840 0 V560 M920 0 V560"/>
+    </g>
+    <!-- 第4层 治理 -->
+    <rect x="60" y="30" width="840" height="110" rx="14" fill="url(#layer4)" stroke="#1cd6ff" stroke-opacity=".5" stroke-width="1.5"/>
+    <text x="90" y="66" fill="#1cd6ff" font-size="17" font-weight="700">第 4 层 · 治理层</text>
+    <text x="90" y="92" fill="#dbe9f7" font-size="13.5">三态迁移（active / dormant / archived）· 链回收 · 修剪台账 · 周盘点 · 长尾配额</text>
+    <text x="90" y="116" fill="#7d9cbb" font-size="12.5">双信号评估（锚点重叠 ≥40% ∧ 共触发 ≥3）· 回验恢复 · 先链后剪</text>
+    <!-- 第3层 工作流 -->
+    <rect x="60" y="150" width="840" height="110" rx="14" fill="url(#layer3)" stroke="#a78bfa" stroke-opacity=".5" stroke-width="1.5"/>
+    <text x="90" y="186" fill="#a78bfa" font-size="17" font-weight="700">第 3 层 · 工作流层</text>
+    <text x="90" y="212" fill="#dbe9f7" font-size="13.5">链生成（长度 ≥ 1）· 执行模式（sequential / parallel / hybrid）· 收敛缓存</text>
+    <text x="90" y="236" fill="#7d9cbb" font-size="12.5">版本联动（技能 patch → 依赖链失效 → 重路由）· 低频链回收</text>
+    <!-- 第2层 匹配验证 -->
+    <rect x="60" y="270" width="840" height="110" rx="14" fill="url(#layer2)" stroke="#25d697" stroke-opacity=".5" stroke-width="1.5"/>
+    <text x="90" y="306" fill="#25d697" font-size="17" font-weight="700">第 2 层 · 匹配与验证层</text>
+    <text x="90" y="332" fill="#dbe9f7" font-size="13.5">深度锚点映射（机制词·非描述）· 路由协议 R1–R4 · 边界排除 · 混淆对区分</text>
+    <text x="90" y="356" fill="#7d9cbb" font-size="12.5">结果信号三选一（任务完成 / 用户反馈 / 产物存在）· 确定性判定</text>
+    <!-- 第1层 资产池 -->
+    <rect x="60" y="390" width="840" height="110" rx="14" fill="url(#layer1)" stroke="#ffb230" stroke-opacity=".5" stroke-width="1.5"/>
+    <text x="90" y="426" fill="#ffb230" font-size="17" font-weight="700">第 1 层 · 资产池</text>
+    <text x="90" y="452" fill="#dbe9f7" font-size="13.5">技能 = 原子（active / dormant / archived）· 深度锚点 · 边界声明 · 结果信号声明</text>
+    <text x="90" y="476" fill="#7d9cbb" font-size="12.5">永不删除 · 一切状态迁移可恢复 · 依赖链列表（版本联动）</text>
+    <!-- router_log 贯通 -->
+    <rect x="60" y="512" width="840" height="34" rx="17" fill="#0a1a2e" stroke="#1cd6ff" stroke-opacity=".35" stroke-width="1"/>
+    <text x="480" y="534" text-anchor="middle" fill="#1cd6ff" font-size="13.5" font-weight="600">router_log · 唯一数据源（修剪 / 聚类 / 自学习）</text>
+    <!-- 连接线 -->
+    <path d="M900 85 H940 V205 H900" stroke="#1cd6ff" stroke-opacity=".25" stroke-width="1.2" fill="none"/>
+    <path d="M900 205 H940 V325 H900" stroke="#a78bfa" stroke-opacity=".25" stroke-width="1.2" fill="none"/>
+    <path d="M900 325 H940 V445 H900" stroke="#25d697" stroke-opacity=".25" stroke-width="1.2" fill="none"/>
+  </svg>
+  <div class="legend">
+    <span><span class="tag t-cyan">治理</span><b>减法治理</b>· 有生有死</span>
+    <span><span class="tag t-purple">工作流</span><b>唯一工作单元</b>· 一切皆链</span>
+    <span><span class="tag t-green">匹配验证</span><b>防幻象</b>· 可回验</span>
+    <span><span class="tag t-amber">资产池</span><b>原子</b>· 三态可恢复</span>
+  </div>
+</div>
+
+<!-- ═════════ 图2: 六步闭环 ═════════ -->
+<div class="card">
+  <h2>图 2 · 六步闭环</h2>
+  <div class="cap">E → R → G → X → V → Log · 每一步输入/机制/输出 · 闭环回流</div>
+  <svg viewBox="0 0 960 420" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="glow2"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <g stroke="#0e2a45" stroke-width="1" opacity=".5">
+      <path d="M0 70 H960 M0 210 H960 M0 350 H960 M120 0 V420 M300 0 V420 M480 0 V420 M660 0 V420 M840 0 V420"/>
+    </g>
+    <!-- 六步圆角块 -->
+    <g font-family="Microsoft YaHei">
+      <rect x="30" y="60" width="135" height="120" rx="12" fill="#0c1f36" stroke="#1cd6ff" stroke-opacity=".55" stroke-width="1.5"/>
+      <circle cx="98" cy="92" r="14" fill="none" stroke="#1cd6ff" stroke-width="1.5"/>
+      <text x="98" y="97" text-anchor="middle" fill="#1cd6ff" font-size="13" font-weight="700">①</text>
+      <text x="98" y="128" text-anchor="middle" fill="#dbe9f7" font-size="15" font-weight="700">事件 E</text>
+      <text x="98" y="152" text-anchor="middle" fill="#7d9cbb" font-size="11.5">意图特征提取</text>
+      <text x="98" y="168" text-anchor="middle" fill="#7d9cbb" font-size="11.5">规范化+同义词</text>
+
+      <rect x="195" y="60" width="135" height="120" rx="12" fill="#0c1f36" stroke="#a78bfa" stroke-opacity=".55" stroke-width="1.5"/>
+      <circle cx="263" cy="92" r="14" fill="none" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="263" y="97" text-anchor="middle" fill="#a78bfa" font-size="13" font-weight="700">②</text>
+      <text x="263" y="128" text-anchor="middle" fill="#dbe9f7" font-size="15" font-weight="700">路由 R</text>
+      <text x="263" y="152" text-anchor="middle" fill="#7d9cbb" font-size="11.5">R1锚点→R2排除</text>
+      <text x="263" y="168" text-anchor="middle" fill="#7d9cbb" font-size="11.5">→R3区分→排序</text>
+
+      <rect x="360" y="60" width="135" height="120" rx="12" fill="#0c1f36" stroke="#25d697" stroke-opacity=".55" stroke-width="1.5"/>
+      <circle cx="428" cy="92" r="14" fill="none" stroke="#25d697" stroke-width="1.5"/>
+      <text x="428" y="97" text-anchor="middle" fill="#25d697" font-size="13" font-weight="700">③</text>
+      <text x="428" y="128" text-anchor="middle" fill="#dbe9f7" font-size="15" font-weight="700">生成链 G</text>
+      <text x="428" y="152" text-anchor="middle" fill="#7d9cbb" font-size="11.5">主技能+支持技能</text>
+      <text x="428" y="168" text-anchor="middle" fill="#7d9cbb" font-size="11.5">长度≥1·单技能链</text>
+
+      <rect x="525" y="60" width="135" height="120" rx="12" fill="#0c1f36" stroke="#ffb230" stroke-opacity=".55" stroke-width="1.5"/>
+      <circle cx="593" cy="92" r="14" fill="none" stroke="#ffb230" stroke-width="1.5"/>
+      <text x="593" y="97" text-anchor="middle" fill="#ffb230" font-size="13" font-weight="700">④</text>
+      <text x="593" y="128" text-anchor="middle" fill="#dbe9f7" font-size="15" font-weight="700">执行 X</text>
+      <text x="593" y="152" text-anchor="middle" fill="#7d9cbb" font-size="11.5">sequential/parallel</text>
+      <text x="593" y="168" text-anchor="middle" fill="#7d9cbb" font-size="11.5">输出喂下步</text>
+
+      <rect x="690" y="60" width="135" height="120" rx="12" fill="#0c1f36" stroke="#ff7180" stroke-opacity=".55" stroke-width="1.5"/>
+      <circle cx="758" cy="92" r="14" fill="none" stroke="#ff7180" stroke-width="1.5"/>
+      <text x="758" y="97" text-anchor="middle" fill="#ff7180" font-size="13" font-weight="700">⑤</text>
+      <text x="758" y="128" text-anchor="middle" fill="#dbe9f7" font-size="15" font-weight="700">回验 V</text>
+      <text x="758" y="152" text-anchor="middle" fill="#7d9cbb" font-size="11.5">信号三选一</text>
+      <text x="758" y="168" text-anchor="middle" fill="#7d9cbb" font-size="11.5">确定性判定</text>
+
+      <rect x="825" y="240" width="120" height="100" rx="12" fill="#0c1f36" stroke="#1cd6ff" stroke-opacity=".55" stroke-width="1.5"/>
+      <circle cx="885" cy="266" r="12" fill="none" stroke="#1cd6ff" stroke-width="1.5"/>
+      <text x="885" y="271" text-anchor="middle" fill="#1cd6ff" font-size="11" font-weight="700">⑥</text>
+      <text x="885" y="298" text-anchor="middle" fill="#dbe9f7" font-size="14" font-weight="700">记录 Log</text>
+      <text x="885" y="322" text-anchor="middle" fill="#7d9cbb" font-size="11">router_log</text>
+    </g>
+    <!-- 主流程箭头（流动虚线） -->
+    <g fill="none" stroke-width="2">
+      <line x1="168" y1="120" x2="190" y2="120" stroke="#1cd6ff" class="flowline"/>
+      <line x1="333" y1="120" x2="355" y2="120" stroke="#a78bfa" class="flowline"/>
+      <line x1="498" y1="120" x2="520" y2="120" stroke="#25d697" class="flowline"/>
+      <line x1="663" y1="120" x2="685" y2="120" stroke="#ffb230" class="flowline"/>
+      <path d="M758 184 Q758 220 800 232" stroke="#ff7180" class="flowline"/>
+      <path d="M880 236 Q905 220 905 185" stroke="#1cd6ff" stroke-opacity="0" fill="none"/>
+    </g>
+    <!-- 回流 -->
+    <path d="M885 344 Q885 380 480 380 Q75 380 75 185" stroke="#1cd6ff" stroke-opacity=".35" stroke-width="1.4" stroke-dasharray="6 6" fill="none"/>
+    <text x="480" y="370" text-anchor="middle" fill="#1cd6ff" font-size="12.5" opacity=".8">数据回流 → 修剪 / 聚类 / 自学习（迭代）</text>
+  </svg>
+  <div class="legend">
+    <span><span class="tag t-cyan">① ⑥</span>入口 / 出口</span>
+    <span><span class="tag t-purple">②</span>选谁</span>
+    <span><span class="tag t-green">③</span>怎么组</span>
+    <span><span class="tag t-amber">④</span>怎么跑</span>
+    <span><span class="tag t-red">⑤</span>对不对</span>
+  </div>
+</div>
+
+<!-- ═════════ 图3: 三态状态机 ═════════ -->
+<div class="card">
+  <h2>图 3 · 技能三态状态机</h2>
+  <div class="cap">永不删除 · 一切迁移可恢复 · 修剪=临时休眠 · 回验=误剪恢复</div>
+  <svg viewBox="0 0 960 300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="glow3"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <g stroke="#0e2a45" stroke-width="1" opacity=".5">
+      <path d="M0 60 H960 M0 150 H960 M0 240 H960 M160 0 V300 M480 0 V300 M800 0 V300"/>
+    </g>
+    <!-- active -->
+    <rect x="70" y="70" width="260" height="130" rx="16" fill="#0c1f36" stroke="#25d697" stroke-opacity=".7" stroke-width="2" filter="url(#glow3)"/>
+    <circle cx="125" cy="112" r="18" fill="none" stroke="#25d697" stroke-width="2"/>
+    <text x="125" y="118" text-anchor="middle" fill="#25d697" font-size="16" font-weight="700">A</text>
+    <text x="200" y="120" text-anchor="middle" fill="#25d697" font-size="20" font-weight="700">激活 Active</text>
+    <text x="200" y="150" text-anchor="middle" fill="#dbe9f7" font-size="13">可被路由进链（公理3）</text>
+    <text x="200" y="172" text-anchor="middle" fill="#7d9cbb" font-size="12">默认状态 · 参与候选集</text>
+
+    <!-- dormant -->
+    <rect x="390" y="70" width="260" height="130" rx="16" fill="#0c1f36" stroke="#ffb230" stroke-opacity=".7" stroke-width="2"/>
+    <circle cx="445" cy="112" r="18" fill="none" stroke="#ffb230" stroke-width="2"/>
+    <text x="445" y="118" text-anchor="middle" fill="#ffb230" font-size="16" font-weight="700">D</text>
+    <text x="520" y="120" text-anchor="middle" fill="#ffb230" font-size="20" font-weight="700">休眠 Dormant</text>
+    <text x="520" y="150" text-anchor="middle" fill="#dbe9f7" font-size="13">动态修剪临时折叠</text>
+    <text x="520" y="172" text-anchor="middle" fill="#7d9cbb" font-size="12">台账记录 · 恢复条件明确</text>
+
+    <!-- archived -->
+    <rect x="710" y="70" width="260" height="130" rx="16" fill="#0c1f36" stroke="#ff7180" stroke-opacity=".6" stroke-width="1.5"/>
+    <circle cx="765" cy="112" r="18" fill="none" stroke="#ff7180" stroke-width="2"/>
+    <text x="765" y="118" text-anchor="middle" fill="#ff7180" font-size="16" font-weight="700">R</text>
+    <text x="840" y="120" text-anchor="middle" fill="#ff7180" font-size="20" font-weight="700">归档 Archived</text>
+    <text x="840" y="150" text-anchor="middle" fill="#dbe9f7" font-size="13">长期回收 · 可回滚</text>
+    <text x="840" y="172" text-anchor="middle" fill="#7d9cbb" font-size="12">永不删除 · 永不销毁</text>
+
+    <!-- 迁移箭头 -->
+    <g fill="none">
+      <path d="M335 135 Q365 135 382 135" stroke="#ffb230" stroke-width="2" marker-end="url(#arrA)"/>
+      <text x="360" y="118" text-anchor="middle" fill="#ffb230" font-size="12" font-weight="600">修剪</text>
+      <text x="360" y="255" text-anchor="middle" fill="#25d697" font-size="12" font-weight="600">回验恢复（误剪自动）</text>
+      <path d="M382 160 Q360 175 335 160" stroke="#25d697" stroke-width="1.8" stroke-dasharray="5 4" fill="none"/>
+      <path d="M655 135 Q685 135 702 135" stroke="#ff7180" stroke-width="2"/>
+      <text x="680" y="118" text-anchor="middle" fill="#ff7180" font-size="12" font-weight="600">超期/双低</text>
+      <text x="680" y="255" text-anchor="middle" fill="#7d9cbb" font-size="12">回滚（连续进化原则）</text>
+      <path d="M702 160 Q680 175 655 160" stroke="#7d9cbb" stroke-width="1.8" stroke-dasharray="5 4" fill="none"/>
+    </g>
+    <defs>
+      <marker id="arrA" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#ffb230"/></marker>
+    </defs>
+  </svg>
+  <div class="legend">
+    <span><span class="tag t-green">激活</span>默认可路由</span>
+    <span><span class="tag t-amber">休眠</span>临时·可恢复</span>
+    <span><span class="tag t-red">归档</span>长期·可回滚</span>
+  </div>
+</div>
+
+<!-- ═════════ 图4: 生态闭环 ═════════ -->
+<div class="card">
+  <h2>图 4 · 生态闭环</h2>
+  <div class="cap">技能 → 链（唯一工作单元）→ 回验 → 修剪 → 生命周期 · 防幻象五层环抱</div>
+  <svg viewBox="0 0 960 480" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="glow4"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <g stroke="#0e2a45" stroke-width="1" opacity=".5">
+      <path d="M0 80 H960 M0 240 H960 M0 400 H960 M120 0 V480 M240 0 V480 M480 0 V480 M720 0 V480 M840 0 V480"/>
+    </g>
+    <!-- 中心: 链 -->
+    <rect x="330" y="170" width="300" height="120" rx="18" fill="#0c1f36" stroke="#1cd6ff" stroke-opacity=".8" stroke-width="2.5" filter="url(#glow4)"/>
+    <text x="480" y="212" text-anchor="middle" fill="#1cd6ff" font-size="20" font-weight="700">链 Chain</text>
+    <text x="480" y="238" text-anchor="middle" fill="#dbe9f7" font-size="13.5">唯一工作单元 · C = [S₁..Sₙ] · n ≥ 1</text>
+    <text x="480" y="262" text-anchor="middle" fill="#7d9cbb" font-size="12.5">单技能链 = n=1 · 无裸调用</text>
+
+    <!-- 四周: 四个机制 -->
+    <rect x="60" y="70" width="200" height="86" rx="12" fill="#0c1f36" stroke="#a78bfa" stroke-opacity=".6" stroke-width="1.5"/>
+    <text x="160" y="102" text-anchor="middle" fill="#a78bfa" font-size="15" font-weight="700">深度锚点路由</text>
+    <text x="160" y="126" text-anchor="middle" fill="#dbe9f7" font-size="12">机制词 · 非描述</text>
+    <text x="160" y="143" text-anchor="middle" fill="#7d9cbb" font-size="11">R1–R4 · 可审计</text>
+
+    <rect x="700" y="70" width="200" height="86" rx="12" fill="#0c1f36" stroke="#25d697" stroke-opacity=".6" stroke-width="1.5"/>
+    <text x="800" y="102" text-anchor="middle" fill="#25d697" font-size="15" font-weight="700">确定性回验</text>
+    <text x="800" y="126" text-anchor="middle" fill="#dbe9f7" font-size="12">信号三选一</text>
+    <text x="800" y="143" text-anchor="middle" fill="#7d9cbb" font-size="11">LLM 不验证自己</text>
+
+    <rect x="60" y="330" width="200" height="86" rx="12" fill="#0c1f36" stroke="#ffb230" stroke-opacity=".6" stroke-width="1.5"/>
+    <text x="160" y="362" text-anchor="middle" fill="#ffb230" font-size="15" font-weight="700">双信号修剪</text>
+    <text x="160" y="386" text-anchor="middle" fill="#dbe9f7" font-size="12">静态重叠 ∧ 共触发</text>
+    <text x="160" y="403" text-anchor="middle" fill="#7d9cbb" font-size="11">临时休眠 · 台账</text>
+
+    <rect x="700" y="330" width="200" height="86" rx="12" fill="#0c1f36" stroke="#ff7180" stroke-opacity=".6" stroke-width="1.5"/>
+    <text x="800" y="362" text-anchor="middle" fill="#ff7180" font-size="15" font-weight="700">生命周期</text>
+    <text x="800" y="386" text-anchor="middle" fill="#dbe9f7" font-size="12">三态迁移 · 链回收</text>
+    <text x="800" y="403" text-anchor="middle" fill="#7d9cbb" font-size="11">可回滚 · 可恢复</text>
+
+    <!-- 连接线 -->
+    <g stroke-width="1.8" fill="none">
+      <path d="M265 113 H325" stroke="#a78bfa" stroke-opacity=".6" stroke-dasharray="5 4"/>
+      <path d="M635 113 H695" stroke="#25d697" stroke-opacity=".6" stroke-dasharray="5 4"/>
+      <path d="M265 373 H325" stroke="#ffb230" stroke-opacity=".6" stroke-dasharray="5 4"/>
+      <path d="M635 373 H695" stroke="#ff7180" stroke-opacity=".6" stroke-dasharray="5 4"/>
+    </g>
+    <!-- 防幻象五层外环 -->
+    <rect x="30" y="30" width="900" height="420" rx="20" fill="none" stroke="#1cd6ff" stroke-opacity=".12" stroke-width="1" stroke-dasharray="3 5"/>
+    <text x="60" y="55" fill="#1cd6ff" font-size="12" opacity=".7">防幻象五层：L1 深度锚点 → L2 边界排除 → L3 混淆区分 → L4 结果回验 → L5 修剪回验</text>
+    <text x="60" y="440" fill="#7d9cbb" font-size="12" opacity=".7">元原则：每个机制本身可被回验 · 无不可验证判定 · 无不可发现幻象</text>
+  </svg>
+  <div class="legend">
+    <span><span class="tag t-purple">路由</span>选谁</span>
+    <span><span class="tag t-green">回验</span>对不对</span>
+    <span><span class="tag t-amber">修剪</span>减什么</span>
+    <span><span class="tag t-red">生命周期</span>怎么活</span>
+  </div>
+</div>
+
+<div class="footer">Skills Chain Framework · 视觉预览版 · 深色科技风 #050f1c / #1cd6ff / #a78bfa / #25d697 / #ffb230 / #ff7180 · 2026-08-07</div>
+</body>
+</html>

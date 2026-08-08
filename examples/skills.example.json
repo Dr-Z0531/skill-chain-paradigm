@@ -1,0 +1,42 @@
+{
+  "verification": {
+    "skill_id": "verification",
+    "state": "active",
+    "version": "1.0.0",
+    "deep_anchors": ["verify", "false-positive", "artifact", "logic layer", "reliability"],
+    "boundary_exclusions": ["single-line check", "no domain knowledge"],
+    "confusable_with": [{"skill": "eval", "disambiguator": "verify->verification / score->eval"}],
+    "result_signal": "artifact exists + JSON valid",
+    "dependent_chains": ["chain-delegation-v1"]
+  },
+  "eval": {
+    "skill_id": "eval",
+    "state": "active",
+    "version": "1.0.0",
+    "deep_anchors": ["evaluate", "score", "calibration", "which change helped"],
+    "boundary_exclusions": ["exploratory prototype"],
+    "confusable_with": [{"skill": "verification", "disambiguator": "verify->verification / score->eval"}],
+    "result_signal": "answer which change made it better",
+    "dependent_chains": ["chain-delegation-v1"]
+  },
+  "strategic": {
+    "skill_id": "strategic",
+    "state": "active",
+    "version": "1.0.0",
+    "deep_anchors": ["reasoning", "opponent intent", "game", "self-play"],
+    "boundary_exclusions": ["single-agent decision", "no opponent trajectory"],
+    "confusable_with": [{"skill": "orchestration", "disambiguator": "division/orchestration->orchestration / reasoning/intent->strategic"}],
+    "result_signal": "opponent intent explicitly modeled, no same-source mutual review",
+    "dependent_chains": ["chain-delegation-v1"]
+  },
+  "orchestration": {
+    "skill_id": "orchestration",
+    "state": "active",
+    "version": "1.0.0",
+    "deep_anchors": ["division", "orchestration", "pipeline", "assign", "domain-specific"],
+    "boundary_exclusions": ["generic coding assistant"],
+    "confusable_with": [{"skill": "strategic", "disambiguator": "division/orchestration->orchestration / reasoning/intent->strategic"}],
+    "result_signal": "domain task success above generic baseline",
+    "dependent_chains": ["chain-delegation-v1"]
+  }
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "run_at": "2026-08-08T08:10:34.699551",
+    "mode": "dry_run",
+    "structural_candidates": [],
+    "total_overlaps": 0,
+    "note": "测试运行（2026-08-08·ad-hoc验证）·非真实修剪"
+  },
+  {
+    "run_at": "2026-08-08T08:11:44.855542",
+    "mode": "dry_run",
+    "structural_candidates": [],
+    "total_overlaps": 0
+  },
+  {
+    "run_at": "2026-08-08T08:12:18.809114",
+    "mode": "dry_run",
+    "structural_candidates": [],
+    "total_overlaps": 0
+  },
+  {
+    "run_at": "2026-08-08T12:18:52.231154",
+    "mode": "dry_run",
+    "structural_candidates": [],
+    "total_overlaps": 0
+  }
+]

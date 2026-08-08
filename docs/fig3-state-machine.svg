@@ -1,0 +1,46 @@
+<svg viewBox="0 0 960 300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="glow3"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <g stroke="#0e2a45" stroke-width="1" opacity=".5">
+      <path d="M0 60 H960 M0 150 H960 M0 240 H960 M160 0 V300 M480 0 V300 M800 0 V300"/>
+    </g>
+    <!-- active -->
+    <rect x="70" y="70" width="260" height="130" rx="16" fill="#0c1f36" stroke="#25d697" stroke-opacity=".7" stroke-width="2" filter="url(#glow3)"/>
+    <circle cx="125" cy="112" r="18" fill="none" stroke="#25d697" stroke-width="2"/>
+    <text x="125" y="118" text-anchor="middle" fill="#25d697" font-size="16" font-weight="700">A</text>
+    <text x="200" y="120" text-anchor="middle" fill="#25d697" font-size="20" font-weight="700">激活 Active</text>
+    <text x="200" y="150" text-anchor="middle" fill="#dbe9f7" font-size="13">可被路由进链（公理3）</text>
+    <text x="200" y="172" text-anchor="middle" fill="#7d9cbb" font-size="12">默认状态 · 参与候选集</text>
+
+    <!-- dormant -->
+    <rect x="390" y="70" width="260" height="130" rx="16" fill="#0c1f36" stroke="#ffb230" stroke-opacity=".7" stroke-width="2"/>
+    <circle cx="445" cy="112" r="18" fill="none" stroke="#ffb230" stroke-width="2"/>
+    <text x="445" y="118" text-anchor="middle" fill="#ffb230" font-size="16" font-weight="700">D</text>
+    <text x="520" y="120" text-anchor="middle" fill="#ffb230" font-size="20" font-weight="700">休眠 Dormant</text>
+    <text x="520" y="150" text-anchor="middle" fill="#dbe9f7" font-size="13">动态修剪临时折叠</text>
+    <text x="520" y="172" text-anchor="middle" fill="#7d9cbb" font-size="12">台账记录 · 恢复条件明确</text>
+
+    <!-- archived -->
+    <rect x="710" y="70" width="260" height="130" rx="16" fill="#0c1f36" stroke="#ff7180" stroke-opacity=".6" stroke-width="1.5"/>
+    <circle cx="765" cy="112" r="18" fill="none" stroke="#ff7180" stroke-width="2"/>
+    <text x="765" y="118" text-anchor="middle" fill="#ff7180" font-size="16" font-weight="700">R</text>
+    <text x="840" y="120" text-anchor="middle" fill="#ff7180" font-size="20" font-weight="700">归档 Archived</text>
+    <text x="840" y="150" text-anchor="middle" fill="#dbe9f7" font-size="13">长期回收 · 可回滚</text>
+    <text x="840" y="172" text-anchor="middle" fill="#7d9cbb" font-size="12">永不删除 · 永不销毁</text>
+
+    <!-- 迁移箭头 -->
+    <g fill="none">
+      <path d="M335 135 Q365 135 382 135" stroke="#ffb230" stroke-width="2" marker-end="url(#arrA)"/>
+      <text x="360" y="118" text-anchor="middle" fill="#ffb230" font-size="12" font-weight="600">修剪</text>
+      <text x="360" y="255" text-anchor="middle" fill="#25d697" font-size="12" font-weight="600">回验恢复（误剪自动）</text>
+      <path d="M382 160 Q360 175 335 160" stroke="#25d697" stroke-width="1.8" stroke-dasharray="5 4" fill="none"/>
+      <path d="M655 135 Q685 135 702 135" stroke="#ff7180" stroke-width="2"/>
+      <text x="680" y="118" text-anchor="middle" fill="#ff7180" font-size="12" font-weight="600">超期/双低</text>
+      <text x="680" y="255" text-anchor="middle" fill="#7d9cbb" font-size="12">回滚（连续进化原则）</text>
+      <path d="M702 160 Q680 175 655 160" stroke="#7d9cbb" stroke-width="1.8" stroke-dasharray="5 4" fill="none"/>
+    </g>
+    <defs>
+      <marker id="arrA" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#ffb230"/></marker>
+    </defs>
+  </svg>

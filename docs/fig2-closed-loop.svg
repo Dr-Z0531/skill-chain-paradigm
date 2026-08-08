@@ -1,0 +1,63 @@
+<svg viewBox="0 0 960 420" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="glow2"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <g stroke="#0e2a45" stroke-width="1" opacity=".5">
+      <path d="M0 70 H960 M0 210 H960 M0 350 H960 M120 0 V420 M300 0 V420 M480 0 V420 M660 0 V420 M840 0 V420"/>
+    </g>
+    <!-- 六步圆角块 -->
+    <g font-family="Microsoft YaHei">
+      <rect x="30" y="60" width="135" height="120" rx="12" fill="#0c1f36" stroke="#1cd6ff" stroke-opacity=".55" stroke-width="1.5"/>
+      <circle cx="98" cy="92" r="14" fill="none" stroke="#1cd6ff" stroke-width="1.5"/>
+      <text x="98" y="97" text-anchor="middle" fill="#1cd6ff" font-size="13" font-weight="700">①</text>
+      <text x="98" y="128" text-anchor="middle" fill="#dbe9f7" font-size="15" font-weight="700">事件 E</text>
+      <text x="98" y="152" text-anchor="middle" fill="#7d9cbb" font-size="11.5">意图特征提取</text>
+      <text x="98" y="168" text-anchor="middle" fill="#7d9cbb" font-size="11.5">规范化+同义词</text>
+
+      <rect x="195" y="60" width="135" height="120" rx="12" fill="#0c1f36" stroke="#a78bfa" stroke-opacity=".55" stroke-width="1.5"/>
+      <circle cx="263" cy="92" r="14" fill="none" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="263" y="97" text-anchor="middle" fill="#a78bfa" font-size="13" font-weight="700">②</text>
+      <text x="263" y="128" text-anchor="middle" fill="#dbe9f7" font-size="15" font-weight="700">路由 R</text>
+      <text x="263" y="152" text-anchor="middle" fill="#7d9cbb" font-size="11.5">R1锚点→R2排除</text>
+      <text x="263" y="168" text-anchor="middle" fill="#7d9cbb" font-size="11.5">→R3区分→排序</text>
+
+      <rect x="360" y="60" width="135" height="120" rx="12" fill="#0c1f36" stroke="#25d697" stroke-opacity=".55" stroke-width="1.5"/>
+      <circle cx="428" cy="92" r="14" fill="none" stroke="#25d697" stroke-width="1.5"/>
+      <text x="428" y="97" text-anchor="middle" fill="#25d697" font-size="13" font-weight="700">③</text>
+      <text x="428" y="128" text-anchor="middle" fill="#dbe9f7" font-size="15" font-weight="700">生成链 G</text>
+      <text x="428" y="152" text-anchor="middle" fill="#7d9cbb" font-size="11.5">主技能+支持技能</text>
+      <text x="428" y="168" text-anchor="middle" fill="#7d9cbb" font-size="11.5">长度≥1·单技能链</text>
+
+      <rect x="525" y="60" width="135" height="120" rx="12" fill="#0c1f36" stroke="#ffb230" stroke-opacity=".55" stroke-width="1.5"/>
+      <circle cx="593" cy="92" r="14" fill="none" stroke="#ffb230" stroke-width="1.5"/>
+      <text x="593" y="97" text-anchor="middle" fill="#ffb230" font-size="13" font-weight="700">④</text>
+      <text x="593" y="128" text-anchor="middle" fill="#dbe9f7" font-size="15" font-weight="700">执行 X</text>
+      <text x="593" y="152" text-anchor="middle" fill="#7d9cbb" font-size="11.5">sequential/parallel</text>
+      <text x="593" y="168" text-anchor="middle" fill="#7d9cbb" font-size="11.5">输出喂下步</text>
+
+      <rect x="690" y="60" width="135" height="120" rx="12" fill="#0c1f36" stroke="#ff7180" stroke-opacity=".55" stroke-width="1.5"/>
+      <circle cx="758" cy="92" r="14" fill="none" stroke="#ff7180" stroke-width="1.5"/>
+      <text x="758" y="97" text-anchor="middle" fill="#ff7180" font-size="13" font-weight="700">⑤</text>
+      <text x="758" y="128" text-anchor="middle" fill="#dbe9f7" font-size="15" font-weight="700">回验 V</text>
+      <text x="758" y="152" text-anchor="middle" fill="#7d9cbb" font-size="11.5">信号三选一</text>
+      <text x="758" y="168" text-anchor="middle" fill="#7d9cbb" font-size="11.5">确定性判定</text>
+
+      <rect x="825" y="240" width="120" height="100" rx="12" fill="#0c1f36" stroke="#1cd6ff" stroke-opacity=".55" stroke-width="1.5"/>
+      <circle cx="885" cy="266" r="12" fill="none" stroke="#1cd6ff" stroke-width="1.5"/>
+      <text x="885" y="271" text-anchor="middle" fill="#1cd6ff" font-size="11" font-weight="700">⑥</text>
+      <text x="885" y="298" text-anchor="middle" fill="#dbe9f7" font-size="14" font-weight="700">记录 Log</text>
+      <text x="885" y="322" text-anchor="middle" fill="#7d9cbb" font-size="11">router_log</text>
+    </g>
+    <!-- 主流程箭头（流动虚线） -->
+    <g fill="none" stroke-width="2">
+      <line x1="168" y1="120" x2="190" y2="120" stroke="#1cd6ff" class="flowline"/>
+      <line x1="333" y1="120" x2="355" y2="120" stroke="#a78bfa" class="flowline"/>
+      <line x1="498" y1="120" x2="520" y2="120" stroke="#25d697" class="flowline"/>
+      <line x1="663" y1="120" x2="685" y2="120" stroke="#ffb230" class="flowline"/>
+      <path d="M758 184 Q758 220 800 232" stroke="#ff7180" class="flowline"/>
+      <path d="M880 236 Q905 220 905 185" stroke="#1cd6ff" stroke-opacity="0" fill="none"/>
+    </g>
+    <!-- 回流 -->
+    <path d="M885 344 Q885 380 480 380 Q75 380 75 185" stroke="#1cd6ff" stroke-opacity=".35" stroke-width="1.4" stroke-dasharray="6 6" fill="none"/>
+    <text x="480" y="370" text-anchor="middle" fill="#1cd6ff" font-size="12.5" opacity=".8">数据回流 → 修剪 / 聚类 / 自学习（迭代）</text>
+  </svg>

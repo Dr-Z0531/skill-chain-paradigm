@@ -1,0 +1,57 @@
+{
+  "skill-context": {
+    "status": "active",
+    "co_trigger": {},
+    "pruned_at": null
+  },
+  "skill-tool-safety": {
+    "status": "active",
+    "co_trigger": {},
+    "pruned_at": null
+  },
+  "skill-evolution": {
+    "status": "active",
+    "co_trigger": {},
+    "pruned_at": null
+  },
+  "skill-memory": {
+    "status": "active",
+    "co_trigger": {},
+    "pruned_at": null
+  },
+  "skill-posttraining": {
+    "status": "active",
+    "co_trigger": {},
+    "pruned_at": null
+  },
+  "skill-eval": {
+    "status": "active",
+    "co_trigger": {},
+    "pruned_at": null
+  },
+  "skill-domain-design": {
+    "status": "active",
+    "co_trigger": {},
+    "pruned_at": null
+  },
+  "skill-strategic": {
+    "status": "active",
+    "co_trigger": {},
+    "pruned_at": null
+  },
+  "skill-verification": {
+    "status": "active",
+    "co_trigger": {},
+    "pruned_at": null
+  },
+  "skill-deep-review": {
+    "status": "active",
+    "co_trigger": {},
+    "pruned_at": null
+  },
+  "skill-harness-review": {
+    "status": "active",
+    "co_trigger": {},
+    "pruned_at": null
+  }
+}

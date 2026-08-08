@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "version": "1.1",
+    "updated": "2026-08-08",
+    "note": "盲测案例集扩充（试点教训SE-R1: 真实事件暴露测试盲区）——原7案例+委派/审查/全链语境3例",
+    "usage": "chain_generator回归测试·router_rules.json迭代验证"
+  },
+  "cases": [
+    {
+      "text": "三个代理协作开发怎么分工",
+      "expect": "skill-domain-design",
+      "note": "R3混淆区分: 分工=编排语义"
+    },
+    {
+      "text": "review round-table里多个AI怎么推理彼此的意图",
+      "expect": "skill-strategic",
+      "note": "推理/意图锚点"
+    },
+    {
+      "text": "委派给子代理的产出怎么验证可靠？怕假阳性",
+      "expect": "skill-verification",
+      "note": "防假阳性·R3 vs eval"
+    },
+    {
+      "text": "帮我写个python脚本读Excel",
+      "expect": null,
+      "note": "负例·零污染"
+    },
+    {
+      "text": "长会话后期引用早期事实越来越难",
+      "expect": "skill-context",
+      "note": "上下文腐化语境"
+    },
+    {
+      "text": "微调SFT还是RL？奖励怎么设计",
+      "expect": "skill-posttraining",
+      "note": "训练决策"
+    },
+    {
+      "text": "改得好不好？要不要换模型",
+      "expect": "skill-eval",
+      "note": "评估决策"
+    },
+    {
+      "text": "委派资深技术专家审查技术方案可行性",
+      "expect": "skill-domain-design",
+      "note": "试点暴露1: 委派/技术可行性语境·补桥词后"
+    },
+    {
+      "text": "委派产出验证链全链走一遍E到R到G到X到V到Log",
+      "expect": "skill-verification",
+      "note": "试点教训: 全链场景·验证语境"
+    },
+    {
+      "text": "技能太多记不住怎么自动匹配",
+      "expect": "skill-context",
+      "note": "上下文管理语境·渐进披露"
+    },
+    {
+      "text": "做一个水电站数通培训课件",
+      "expect": "domain-courseware-dev",
+      "note": "长尾路由: 培训语境（长尾索引）"
+    },
+    {
+      "text": "设计一个验证器用逻辑编程防假阳性",
+      "expect": "skill-verification",
+      "note": "验证器+逻辑=verification专属锚点"
+    },
+    {
+      "text": "daily sync复盘与今日任务分派",
+      "expect": "skill-evolution",
+      "note": "自主运行审计暴露: R9声明复盘走链·补桥后路由"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+<svg viewBox="0 0 960 480" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="glow4"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <g stroke="#0e2a45" stroke-width="1" opacity=".5">
+      <path d="M0 80 H960 M0 240 H960 M0 400 H960 M120 0 V480 M240 0 V480 M480 0 V480 M720 0 V480 M840 0 V480"/>
+    </g>
+    <!-- 中心: 链 -->
+    <rect x="330" y="170" width="300" height="120" rx="18" fill="#0c1f36" stroke="#1cd6ff" stroke-opacity=".8" stroke-width="2.5" filter="url(#glow4)"/>
+    <text x="480" y="212" text-anchor="middle" fill="#1cd6ff" font-size="20" font-weight="700">链 Chain</text>
+    <text x="480" y="238" text-anchor="middle" fill="#dbe9f7" font-size="13.5">唯一工作单元 · C = [S₁..Sₙ] · n ≥ 1</text>
+    <text x="480" y="262" text-anchor="middle" fill="#7d9cbb" font-size="12.5">单技能链 = n=1 · 无裸调用</text>
+
+    <!-- 四周: 四个机制 -->
+    <rect x="60" y="70" width="200" height="86" rx="12" fill="#0c1f36" stroke="#a78bfa" stroke-opacity=".6" stroke-width="1.5"/>
+    <text x="160" y="102" text-anchor="middle" fill="#a78bfa" font-size="15" font-weight="700">深度锚点路由</text>
+    <text x="160" y="126" text-anchor="middle" fill="#dbe9f7" font-size="12">机制词 · 非描述</text>
+    <text x="160" y="143" text-anchor="middle" fill="#7d9cbb" font-size="11">R1–R4 · 可审计</text>
+
+    <rect x="700" y="70" width="200" height="86" rx="12" fill="#0c1f36" stroke="#25d697" stroke-opacity=".6" stroke-width="1.5"/>
+    <text x="800" y="102" text-anchor="middle" fill="#25d697" font-size="15" font-weight="700">确定性回验</text>
+    <text x="800" y="126" text-anchor="middle" fill="#dbe9f7" font-size="12">信号三选一</text>
+    <text x="800" y="143" text-anchor="middle" fill="#7d9cbb" font-size="11">LLM 不验证自己</text>
+
+    <rect x="60" y="330" width="200" height="86" rx="12" fill="#0c1f36" stroke="#ffb230" stroke-opacity=".6" stroke-width="1.5"/>
+    <text x="160" y="362" text-anchor="middle" fill="#ffb230" font-size="15" font-weight="700">双信号修剪</text>
+    <text x="160" y="386" text-anchor="middle" fill="#dbe9f7" font-size="12">静态重叠 ∧ 共触发</text>
+    <text x="160" y="403" text-anchor="middle" fill="#7d9cbb" font-size="11">临时休眠 · 台账</text>
+
+    <rect x="700" y="330" width="200" height="86" rx="12" fill="#0c1f36" stroke="#ff7180" stroke-opacity=".6" stroke-width="1.5"/>
+    <text x="800" y="362" text-anchor="middle" fill="#ff7180" font-size="15" font-weight="700">生命周期</text>
+    <text x="800" y="386" text-anchor="middle" fill="#dbe9f7" font-size="12">三态迁移 · 链回收</text>
+    <text x="800" y="403" text-anchor="middle" fill="#7d9cbb" font-size="11">可回滚 · 可恢复</text>
+
+    <!-- 连接线 -->
+    <g stroke-width="1.8" fill="none">
+      <path d="M265 113 H325" stroke="#a78bfa" stroke-opacity=".6" stroke-dasharray="5 4"/>
+      <path d="M635 113 H695" stroke="#25d697" stroke-opacity=".6" stroke-dasharray="5 4"/>
+      <path d="M265 373 H325" stroke="#ffb230" stroke-opacity=".6" stroke-dasharray="5 4"/>
+      <path d="M635 373 H695" stroke="#ff7180" stroke-opacity=".6" stroke-dasharray="5 4"/>
+    </g>
+    <!-- 防幻象五层外环 -->
+    <rect x="30" y="30" width="900" height="420" rx="20" fill="none" stroke="#1cd6ff" stroke-opacity=".12" stroke-width="1" stroke-dasharray="3 5"/>
+    <text x="60" y="55" fill="#1cd6ff" font-size="12" opacity=".7">防幻象五层：L1 深度锚点 → L2 边界排除 → L3 混淆区分 → L4 结果回验 → L5 修剪回验</text>
+    <text x="60" y="440" fill="#7d9cbb" font-size="12" opacity=".7">元原则：每个机制本身可被回验 · 无不可验证判定 · 无不可发现幻象</text>
+  </svg>

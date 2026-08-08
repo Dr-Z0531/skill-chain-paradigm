@@ -1,0 +1,41 @@
+<svg viewBox="0 0 960 560" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="layer4" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1cd6ff" stop-opacity=".16"/><stop offset="1" stop-color="#a78bfa" stop-opacity=".16"/></linearGradient>
+      <linearGradient id="layer3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a78bfa" stop-opacity=".14"/><stop offset="1" stop-color="#25d697" stop-opacity=".14"/></linearGradient>
+      <linearGradient id="layer2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#25d697" stop-opacity=".13"/><stop offset="1" stop-color="#ffb230" stop-opacity=".13"/></linearGradient>
+      <linearGradient id="layer1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffb230" stop-opacity=".12"/><stop offset="1" stop-color="#ff7180" stop-opacity=".12"/></linearGradient>
+      <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <!-- 背景网格 -->
+    <g stroke="#0e2a45" stroke-width="1" opacity=".5">
+      <path d="M0 40 H960 M0 120 H960 M0 200 H960 M0 280 H960 M0 360 H960 M0 440 H960 M0 520 H960"/>
+      <path d="M40 0 V560 M120 0 V560 M200 0 V560 M280 0 V560 M360 0 V560 M440 0 V560 M520 0 V560 M600 0 V560 M680 0 V560 M760 0 V560 M840 0 V560 M920 0 V560"/>
+    </g>
+    <!-- 第4层 治理 -->
+    <rect x="60" y="30" width="840" height="110" rx="14" fill="url(#layer4)" stroke="#1cd6ff" stroke-opacity=".5" stroke-width="1.5"/>
+    <text x="90" y="66" fill="#1cd6ff" font-size="17" font-weight="700">第 4 层 · 治理层</text>
+    <text x="90" y="92" fill="#dbe9f7" font-size="13.5">三态迁移（active / dormant / archived）· 链回收 · 修剪台账 · 周盘点 · 长尾配额</text>
+    <text x="90" y="116" fill="#7d9cbb" font-size="12.5">双信号评估（锚点重叠 ≥40% ∧ 共触发 ≥3）· 回验恢复 · 先链后剪</text>
+    <!-- 第3层 工作流 -->
+    <rect x="60" y="150" width="840" height="110" rx="14" fill="url(#layer3)" stroke="#a78bfa" stroke-opacity=".5" stroke-width="1.5"/>
+    <text x="90" y="186" fill="#a78bfa" font-size="17" font-weight="700">第 3 层 · 工作流层</text>
+    <text x="90" y="212" fill="#dbe9f7" font-size="13.5">链生成（长度 ≥ 1）· 执行模式（sequential / parallel / hybrid）· 收敛缓存</text>
+    <text x="90" y="236" fill="#7d9cbb" font-size="12.5">版本联动（技能 patch → 依赖链失效 → 重路由）· 低频链回收</text>
+    <!-- 第2层 匹配验证 -->
+    <rect x="60" y="270" width="840" height="110" rx="14" fill="url(#layer2)" stroke="#25d697" stroke-opacity=".5" stroke-width="1.5"/>
+    <text x="90" y="306" fill="#25d697" font-size="17" font-weight="700">第 2 层 · 匹配与验证层</text>
+    <text x="90" y="332" fill="#dbe9f7" font-size="13.5">深度锚点映射（机制词·非描述）· 路由协议 R1–R4 · 边界排除 · 混淆对区分</text>
+    <text x="90" y="356" fill="#7d9cbb" font-size="12.5">结果信号三选一（任务完成 / 用户反馈 / 产物存在）· 确定性判定</text>
+    <!-- 第1层 资产池 -->
+    <rect x="60" y="390" width="840" height="110" rx="14" fill="url(#layer1)" stroke="#ffb230" stroke-opacity=".5" stroke-width="1.5"/>
+    <text x="90" y="426" fill="#ffb230" font-size="17" font-weight="700">第 1 层 · 资产池</text>
+    <text x="90" y="452" fill="#dbe9f7" font-size="13.5">技能 = 原子（active / dormant / archived）· 深度锚点 · 边界声明 · 结果信号声明</text>
+    <text x="90" y="476" fill="#7d9cbb" font-size="12.5">永不删除 · 一切状态迁移可恢复 · 依赖链列表（版本联动）</text>
+    <!-- router_log 贯通 -->
+    <rect x="60" y="512" width="840" height="34" rx="17" fill="#0a1a2e" stroke="#1cd6ff" stroke-opacity=".35" stroke-width="1"/>
+    <text x="480" y="534" text-anchor="middle" fill="#1cd6ff" font-size="13.5" font-weight="600">router_log · 唯一数据源（修剪 / 聚类 / 自学习）</text>
+    <!-- 连接线 -->
+    <path d="M900 85 H940 V205 H900" stroke="#1cd6ff" stroke-opacity=".25" stroke-width="1.2" fill="none"/>
+    <path d="M900 205 H940 V325 H900" stroke="#a78bfa" stroke-opacity=".25" stroke-width="1.2" fill="none"/>
+    <path d="M900 325 H940 V445 H900" stroke="#25d697" stroke-opacity=".25" stroke-width="1.2" fill="none"/>
+  </svg>

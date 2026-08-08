@@ -1,0 +1,12 @@
+{
+  "skill-a": {
+    "status": "active",
+    "co_trigger": {},
+    "pruned_at": null
+  },
+  "skill-c": {
+    "status": "active",
+    "co_trigger": {},
+    "pruned_at": null
+  }
+}

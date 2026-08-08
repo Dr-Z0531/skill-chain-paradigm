@@ -1,0 +1,365 @@
+{
+  "meta": {
+    "version": "1.0",
+    "source": "skill-anchor-mapping-v2 (internal)",
+    "paradigm_ref": "skill-chain-paradigm-spec v1.0 (internal) 3.1/5.3/7.1",
+    "updated": "2026-08-07",
+    "note": "R1深度锚点优先/R2边界排除先行/R3混淆区分/R4结果信号回验——编号与范式一致"
+  },
+  "protocol": {
+    "R1": "深度锚点优先: 意图文本→先匹配深度锚点列(核心判断层机制词)·非description",
+    "R2": "边界排除先行: 意图含边界排除列词→直接不路由该技能",
+    "R3": "混淆对显式区分: 同时命中易混淆邻居双方→用区分词对二选一",
+    "R4": "结果信号回验: 执行后对照结果信号·不达→router_log标记疑似误路由→特征表迭代",
+    "confidence": {
+      "high": "锚点命中>=2 → 直路由",
+      "medium": "锚点命中==1 → 过混淆裁决+回验双闸",
+      "low": "锚点命中==0 → 同义词桥(用户语→锚点语归一化)后重匹配·仍0→目录兜底",
+      "exclusion_first": "R2排除在匹配之前执行·排除命中→直接不路由"
+    }
+  },
+  "skills": [
+    {
+      "name": "skill-context",
+      "core_layer": "上下文供给(单代理上下文管理)",
+      "anchors": [
+        "状态栏",
+        "渐进披露",
+        "静态前缀冻结",
+        "上下文腐化",
+        "固定开头"
+      ],
+      "exclusions": [
+        "超短会话",
+        "需求没搞清",
+        "模型能力本身问题"
+      ],
+      "confusions": [
+        {
+          "peer": "skill-memory",
+          "pair": [
+            "状态栏/临时进度",
+            "长期记忆/跨会话"
+          ]
+        }
+      ],
+      "result_signal": "长会话后期能准确引用早期事实",
+      "dep_chains": [
+        "委派链",
+        "蒸馏链",
+        "验证链",
+        "进化链"
+      ]
+    },
+    {
+      "name": "skill-tool-safety",
+      "core_layer": "执行前安全(工具调用护栏)",
+      "anchors": [
+        "提示注入",
+        "最小权限",
+        "Sidecar",
+        "护栏分层",
+        "两段式确认"
+      ],
+      "exclusions": [
+        "轻量原型",
+        "无外部反馈",
+        "纯本地单文件"
+      ],
+      "confusions": [
+        {
+          "peer": "skill-verification",
+          "pair": [
+            "执行前/工具调用",
+            "执行后/产出验证"
+          ]
+        }
+      ],
+      "result_signal": "危险操作执行前被拦·事故可归因",
+      "dep_chains": [
+        "委派链"
+      ]
+    },
+    {
+      "name": "skill-evolution",
+      "core_layer": "能力进化(经验→候选→验证→发布)",
+      "anchors": [
+        "在线离线双循环",
+        "可证伪变更契约",
+        "睡眠学习",
+        "跨轨迹对照"
+      ],
+      "exclusions": [
+        "单次任务",
+        "探索原型",
+        "想让模型直接训练自己"
+      ],
+      "confusions": [
+        {
+          "peer": "skill-memory",
+          "pair": [
+            "经验变能力",
+            "记住内容"
+          ]
+        }
+      ],
+      "result_signal": "能力曲线随经历增长·更新可回滚",
+      "dep_chains": [
+        "进化链"
+      ]
+    },
+    {
+      "name": "skill-memory",
+      "core_layer": "长期记忆(跨会话知识库)",
+      "anchors": [
+        "先提炼再索引",
+        "只追加不删除",
+        "双层记忆",
+        "权限过滤下推检索层"
+      ],
+      "exclusions": [
+        "超短会话",
+        "临时任务状态"
+      ],
+      "confusions": [
+        {
+          "peer": "skill-context",
+          "pair": [
+            "长期记忆/知识库",
+            "状态栏/进度"
+          ]
+        }
+      ],
+      "result_signal": "换会话还记得偏好·统计类查询不靠临场数数",
+      "dep_chains": [
+        "进化链"
+      ]
+    },
+    {
+      "name": "skill-posttraining",
+      "core_layer": "训练决策(SFT/RL/奖励设计)",
+      "anchors": [
+        "先Harness后训练",
+        "先SFT后RL",
+        "防Goodhart",
+        "奖励三件套",
+        "数据宁精勿多"
+      ],
+      "exclusions": [
+        "想让模型记事实(RAG)",
+        "提示词能解决"
+      ],
+      "confusions": [
+        {
+          "peer": "skill-eval",
+          "pair": [
+            "训练/奖励/微调",
+            "评估/验证/评分"
+          ]
+        }
+      ],
+      "result_signal": "训练指标与人工评估同升·无奖励作弊",
+      "dep_chains": [
+        "蒸馏链"
+      ]
+    },
+    {
+      "name": "skill-eval",
+      "core_layer": "评估方法(改得好不好/换不换模型)",
+      "anchors": [
+        "三层验证器",
+        "剧本经营",
+        "校准kappa>0.7",
+        "消融基础设施",
+        "长期五类"
+      ],
+      "exclusions": [
+        "探索原型",
+        "小项目",
+        "需求没看清"
+      ],
+      "confusions": [
+        {
+          "peer": "skill-posttraining",
+          "pair": [
+            "评估/判断效果",
+            "训练/改进模型"
+          ]
+        },
+        {
+          "peer": "skill-verification",
+          "pair": [
+            "评估方法学",
+            "验证架构"
+          ]
+        }
+      ],
+      "result_signal": "每次改动可答\"是哪个改变让它变好\"",
+      "dep_chains": [
+        "验证链",
+        "蒸馏链"
+      ]
+    },
+    {
+      "name": "skill-domain-design",
+      "core_layer": "领域代理架构(专用编码/设计代理)",
+      "anchors": [
+        "多Agent编排",
+        "Planner",
+        "Generator",
+        "Synthesizer",
+        "Evaluator",
+        "查询-摘要检索",
+        "免训练优先",
+        "评估闭环上限"
+      ],
+      "exclusions": [
+        "通用编码辅助",
+        "无知识库无检查库"
+      ],
+      "confusions": [
+        {
+          "peer": "skill-strategic",
+          "pair": [
+            "分工/编排/架构",
+            "推理/意图/博弈"
+          ]
+        }
+      ],
+      "result_signal": "领域任务成功率显著高于通用模型",
+      "dep_chains": [
+        "委派链",
+        "蒸馏链"
+      ]
+    },
+    {
+      "name": "skill-strategic",
+      "core_layer": "多智能体战略推理(博弈/协作)",
+      "anchors": [
+        "四字段认知循环",
+        "OpponentIntent",
+        "self-play失效",
+        "角色分离",
+        "奖励三件套",
+        "微展开"
+      ],
+      "exclusions": [
+        "单代理决策",
+        "非博弈",
+        "无对手轨迹"
+      ],
+      "confusions": [
+        {
+          "peer": "skill-domain-design",
+          "pair": [
+            "推理循环/意图建模",
+            "任务分工/编排"
+          ]
+        }
+      ],
+      "result_signal": "对手意图显式建模·推理可审计·无同源互评",
+      "dep_chains": [
+        "委派链"
+      ]
+    },
+    {
+      "name": "skill-verification",
+      "core_layer": "产出验证(执行后可靠性)",
+      "anchors": [
+        "防自述可信",
+        "独立逻辑层判定",
+        "双保险",
+        "Shield",
+        "非蕴含定位",
+        "置信度<=最弱证据",
+        "验证链",
+        "全链"
+      ],
+      "exclusions": [
+        "单次简单检查",
+        "无领域知识可编码"
+      ],
+      "confusions": [
+        {
+          "peer": "skill-eval",
+          "pair": [
+            "验证架构/逻辑蕴含",
+            "评估方法/评分校准"
+          ]
+        },
+        {
+          "peer": "skill-tool-safety",
+          "pair": [
+            "执行后/产出",
+            "执行前/工具"
+          ]
+        }
+      ],
+      "result_signal": "假阳性显著下降·失败可解释定位",
+      "dep_chains": [
+        "委派链",
+        "验证链",
+        "蒸馏链"
+      ]
+    },
+    {
+      "name": "skill-deep-review",
+      "core_layer": "深度审查方法论(五步对抗决策失败)",
+      "anchors": [
+        "五步闭环",
+        "E1-E6",
+        "辩论脚本",
+        "具名派别",
+        "收敛检查表"
+      ],
+      "exclusions": [
+        "时间敏感",
+        "证据稀缺",
+        "低风险",
+        "纯定性",
+        "单轮问答"
+      ],
+      "confusions": [
+        {
+          "peer": "skill-harness-review",
+          "pair": [
+            "五步法/推演/创意",
+            "证据链/五维审查"
+          ]
+        }
+      ],
+      "result_signal": "质疑挖出常规看不到的洞·结论带前置风险",
+      "dep_chains": [
+        "审查链"
+      ]
+    },
+    {
+      "name": "skill-harness-review",
+      "core_layer": "Agent Harness审查(五维证据链)",
+      "anchors": [
+        "五维15检查",
+        "证据状态7级",
+        "天花板表",
+        "配置!=使用",
+        "Task Episode"
+      ],
+      "exclusions": [
+        "非Agent审查场景",
+        "无会话证据"
+      ],
+      "confusions": [
+        {
+          "peer": "skill-deep-review",
+          "pair": [
+            "证据阶梯/五维/天花板",
+            "五步/辩论/推演"
+          ]
+        }
+      ],
+      "result_signal": "审查结论全部有证据状态标注·无填充空白",
+      "dep_chains": [
+        "验证链"
+      ]
+    }
+  ]
+}

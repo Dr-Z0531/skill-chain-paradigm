@@ -1,0 +1,44 @@
+{
+  "chains": [
+    {
+      "fingerprint": "skill-a+skill-b|len2",
+      "skills": [
+        "skill-a",
+        "skill-b"
+      ],
+      "length": 2,
+      "mode": "sequential",
+      "chain_id_first": "test",
+      "count": 3,
+      "converged": true,
+      "first_seen": "2026-08-09T01:02:51.624154",
+      "last_seen": "2026-08-09T01:02:51.628208",
+      "version_valid": false,
+      "skill_versions": {
+        "skill-a": "v1",
+        "skill-b": "v1"
+      },
+      "invalidated_at": "2026-08-09T01:02:51.634806"
+    },
+    {
+      "fingerprint": "skill-x|len1",
+      "skills": [
+        "skill-x"
+      ],
+      "length": 1,
+      "mode": "sequential",
+      "chain_id_first": "test",
+      "count": 1,
+      "converged": false,
+      "first_seen": "2026-08-09T01:02:51.631764",
+      "last_seen": "2026-08-09T01:02:51.631764",
+      "version_valid": true,
+      "skill_versions": {
+        "skill-x": "v1"
+      }
+    }
+  ],
+  "stats": {
+    "created": "2026-08-09T01:02:51.624154"
+  }
+}
