@@ -5,3 +5,6 @@ __pycache__/
 dist/
 build/
 .venv/
+router_log.jsonl
+__pycache__/
+*.pyc
