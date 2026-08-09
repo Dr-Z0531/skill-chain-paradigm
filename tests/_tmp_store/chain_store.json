@@ -11,14 +11,14 @@
       "chain_id_first": "test",
       "count": 3,
       "converged": true,
-      "first_seen": "2026-08-09T01:02:51.624154",
-      "last_seen": "2026-08-09T01:02:51.628208",
+      "first_seen": "2026-08-09T01:20:03.383096",
+      "last_seen": "2026-08-09T01:20:03.386557",
       "version_valid": false,
       "skill_versions": {
         "skill-a": "v1",
         "skill-b": "v1"
       },
-      "invalidated_at": "2026-08-09T01:02:51.634806"
+      "invalidated_at": "2026-08-09T01:20:03.393310"
     },
     {
       "fingerprint": "skill-x|len1",
@@ -30,8 +30,8 @@
       "chain_id_first": "test",
       "count": 1,
       "converged": false,
-      "first_seen": "2026-08-09T01:02:51.631764",
-      "last_seen": "2026-08-09T01:02:51.631764",
+      "first_seen": "2026-08-09T01:20:03.389806",
+      "last_seen": "2026-08-09T01:20:03.389806",
       "version_valid": true,
       "skill_versions": {
         "skill-x": "v1"
@@ -39,6 +39,6 @@
     }
   ],
   "stats": {
-    "created": "2026-08-09T01:02:51.624154"
+    "created": "2026-08-09T01:20:03.383096"
   }
 }
