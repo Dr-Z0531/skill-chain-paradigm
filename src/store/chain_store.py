@@ -12,7 +12,7 @@ import os
 from datetime import datetime
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-STORE_FP = os.path.join(BASE, "..", "data", "chain_store.json")
+STORE_FP = os.path.join(BASE, "chain_store.json")
 
 def load_store():
     if os.path.exists(STORE_FP):
@@ -109,7 +109,7 @@ def main():
 def selftest():
     """自测（R1·2026-08-08）: 链库收敛3次"""
     import tempfile
-    st = os.path.join(tempfile.gettempdir(), "host-verify-cs.json")
+    st = os.path.join(tempfile.gettempdir(), "chain-verify-cs.json")
     global STORE_FP
     old_fp = STORE_FP
     STORE_FP = st

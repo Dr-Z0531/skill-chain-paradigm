@@ -1,0 +1,43 @@
+{
+  "chains": [
+    {
+      "fingerprint": "five-step-review-review|len1",
+      "skills": [
+        "five-step-review-review"
+      ],
+      "length": 1,
+      "mode": "sequential",
+      "chain_id_first": "cli",
+      "count": 1,
+      "converged": false,
+      "first_seen": "2026-08-08T18:39:54.758846",
+      "last_seen": "2026-08-08T18:39:54.758846",
+      "version_valid": true,
+      "skill_versions": {
+        "five-step-review-review": "v1"
+      }
+    },
+    {
+      "fingerprint": "five-step-review-review+agent-verification-patterns|len2",
+      "skills": [
+        "five-step-review-review",
+        "agent-verification-patterns"
+      ],
+      "length": 2,
+      "mode": "sequential",
+      "chain_id_first": "cli",
+      "count": 1,
+      "converged": false,
+      "first_seen": "2026-08-08T22:01:57.401504",
+      "last_seen": "2026-08-08T22:01:57.401504",
+      "version_valid": true,
+      "skill_versions": {
+        "five-step-review-review": "v1",
+        "agent-verification-patterns": "v1"
+      }
+    }
+  ],
+  "stats": {
+    "created": "2026-08-08T18:39:54.758846"
+  }
+}

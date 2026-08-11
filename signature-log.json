@@ -1,0 +1,622 @@
+[
+  {
+    "artifact": "skill-chain-paradigm v0.2.0 (release-candidate)",
+    "signed_at": "2026-08-08 14:35:51",
+    "signer": "Dr.Z's AI Company (Executive Director authorization)",
+    "seal": "👑",
+    "files": 56,
+    "total_bytes": 1394680,
+    "sha256_manifest": [
+      {
+        "file": ".gitignore",
+        "sha256": "f4aaefdd72228c2eae4b0c083026237b1acd3ae8d31364f808ebdf1c4eafa67b",
+        "bytes": 73
+      },
+      {
+        "file": "CHANGELOG-EN.md",
+        "sha256": "275f7ce04b363d741bb93bb9735baabcce06a1c539ac1a2e4a3a8a2c35eb506d",
+        "bytes": 2095
+      },
+      {
+        "file": "CHANGELOG.md",
+        "sha256": "edac0d286a54ce1c1e30ddf808ca49dedfd9280dfd22c264e32bbe35866ddb88",
+        "bytes": 2346
+      },
+      {
+        "file": "CODE_OF_CONDUCT-EN.md",
+        "sha256": "5025a8f167178e2d3e744d4c50b7c7f41e8757eafbf6b610f2556f690f874cff",
+        "bytes": 1399
+      },
+      {
+        "file": "CODE_OF_CONDUCT.md",
+        "sha256": "1e2364a84828389efc47d80d6bf26824c6014bc2194105c59ce3415761f12e35",
+        "bytes": 1135
+      },
+      {
+        "file": "CONTRIBUTING-EN.md",
+        "sha256": "5726e2e0cc5edac61ba41fa0d26b0c80533d953dc6032c62714f97f839151b8f",
+        "bytes": 2815
+      },
+      {
+        "file": "CONTRIBUTING.md",
+        "sha256": "686d9f1f5df30fd2cca911c7314f3c3305454d5c70d58b8e0a9f60b21731af7f",
+        "bytes": 2778
+      },
+      {
+        "file": "LICENSE",
+        "sha256": "bd6f3df8922e0c287f7ee912a65c997b4ed2d0b6778f874ffdafb6851857fbbf",
+        "bytes": 1095
+      },
+      {
+        "file": "README-EN.md",
+        "sha256": "8dac4a45bbc3a8fc510a31b8f437b11743c033623f979d443ae536f68937d6ab",
+        "bytes": 15335
+      },
+      {
+        "file": "README.md",
+        "sha256": "794aad88d3f657673ff8c079cf4236400e57199e4c6d1d754f6bed4fc069bebf",
+        "bytes": 14765
+      },
+      {
+        "file": "SECURITY-EN.md",
+        "sha256": "1ad79537488d7af7c180b81de6285b417890ce8dbbdeaf40d80c5d58c5e267c1",
+        "bytes": 919
+      },
+      {
+        "file": "SECURITY.md",
+        "sha256": "4cb013b69e4d3683b039d1cb9577279afe91a3318fc2160249e8c0a8d346a521",
+        "bytes": 815
+      },
+      {
+        "file": "TESTING-REPORT-EN.md",
+        "sha256": "223d2aba4a72f0856f957bc145af784352848fb47496be9bb4f31424cff432b0",
+        "bytes": 3181
+      },
+      {
+        "file": "TESTING-REPORT.md",
+        "sha256": "3181469d08c1937f34433cb6effa8e0293149e6e50e427a00aa97ab97b952f08",
+        "bytes": 3191
+      },
+      {
+        "file": "docs/architecture/README-EN.md",
+        "sha256": "c516e7645b94266d7d9500ada8d1558eb59f0e53fdc58c72b640dfc39fb7d4e9",
+        "bytes": 2223
+      },
+      {
+        "file": "docs/architecture/README.md",
+        "sha256": "2b3ac0c072635fd4dee84a9039519346b5c452aa884b0bc7614227ffc2103d65",
+        "bytes": 3620
+      },
+      {
+        "file": "docs/architecture/chain-lifecycle-EN.md",
+        "sha256": "a39d769964b199084411af9b25a1f19999b8b2bec176901219c34a4089132889",
+        "bytes": 1341
+      },
+      {
+        "file": "docs/architecture/chain-lifecycle.md",
+        "sha256": "941716b016914011d4d0d75173ae95db1362e6bd16dc6ff5a0177efc3e7af9d1",
+        "bytes": 2199
+      },
+      {
+        "file": "docs/architecture/pruning-EN.md",
+        "sha256": "25a3fa21966b5cb2fcb00dcc1fe8717d5bac3df682dbdde616332bb02321d2ee",
+        "bytes": 1412
+      },
+      {
+        "file": "docs/architecture/pruning.md",
+        "sha256": "81d44379a64d81db303c10600fd819f039a92278d8500bbe08ec5393bbf29a93",
+        "bytes": 2656
+      },
+      {
+        "file": "docs/architecture/routing-EN.md",
+        "sha256": "3d64d6d924ba52305430fcb4b3dd986fa1d6788b0d7ee7a681aad0df6d75f1ea",
+        "bytes": 1888
+      },
+      {
+        "file": "docs/architecture/routing.md",
+        "sha256": "093e3fc4cdfd853eb871e473ec88572adb24f11f8decd0eed2fd67e13a4a3c06",
+        "bytes": 2780
+      },
+      {
+        "file": "docs/architecture/verification-EN.md",
+        "sha256": "80a33eccada7ce922b68cd8181fbabc26453a40fc6bfeb083a2ab5e2aa46af37",
+        "bytes": 1081
+      },
+      {
+        "file": "docs/architecture/verification.md",
+        "sha256": "4157fb4eef51747244d9496544d5be69b8b28276ccabdfc24e138237de39c468",
+        "bytes": 1580
+      },
+      {
+        "file": "docs/fig1-architecture.svg",
+        "sha256": "671997811532fe1d35673ea0409546e8623e07c691f13256da4ea2bcec2ac6fb",
+        "bytes": 4444
+      },
+      {
+        "file": "docs/fig2-closed-loop.svg",
+        "sha256": "917dc3b0aa137e4b0b0189178e55b00982ed90b233289979e7d81aa1dfce1705",
+        "bytes": 5320
+      },
+      {
+        "file": "docs/fig3-state-machine.svg",
+        "sha256": "1624a1378da0888ea695b86ec1032ac0c79de0a3117595839430f6bb6f3e7075",
+        "bytes": 3632
+      },
+      {
+        "file": "docs/fig4-ecosystem.svg",
+        "sha256": "8b71e9ccb78ef7ee2da879a497fbbf9ce83f9f8f0dd02d14ac22688f14868eb0",
+        "bytes": 3877
+      },
+      {
+        "file": "docs/getting-started/README-EN.md",
+        "sha256": "ae2ac6f786aa5d3dc0e98bc93d4f735cfbb5c9a9629b81c1f41e8821bf45bb54",
+        "bytes": 1696
+      },
+      {
+        "file": "docs/getting-started/README.md",
+        "sha256": "2cc993285d1dff461cb8037c35f186d8cbd2a4feab6a123c2cf8504464b95292",
+        "bytes": 3100
+      },
+      {
+        "file": "docs/logo.png",
+        "sha256": "5befa175cdfff3c9604e7512de4cc4a25d5114b96249e751e9c6944820378342",
+        "bytes": 105609
+      },
+      {
+        "file": "docs/visual-preview-small.jpg",
+        "sha256": "c59e207b68ee34be3aa71cfd12bc081cdfec5022821442514070059a65accc5c",
+        "bytes": 154395
+      },
+      {
+        "file": "docs/visual-preview.html",
+        "sha256": "9fe965b3ebf630a4bf93cbe57524645a319635aff310e8d359c7ff9df76643d7",
+        "bytes": 22055
+      },
+      {
+        "file": "docs/visual-preview.png",
+        "sha256": "40b6243098fa3af854cf963bfc624905ef4b024a983c070f9eb30134e0225de2",
+        "bytes": 958197
+      },
+      {
+        "file": "examples/delegation_chain.py",
+        "sha256": "2c370fbaf4b8a180a7cf3789ebd96f5d18f273ee7a6211e0d259edd5a8475505",
+        "bytes": 977
+      },
+      {
+        "file": "examples/single_skill_chain.py",
+        "sha256": "9172465d8ba8a5f04d7dd4540a80e6d410526042444896acd030dbf7ef2a80e6",
+        "bytes": 1038
+      },
+      {
+        "file": "examples/skills.example.json",
+        "sha256": "44abae34eda2966e78c2489dfbb7e37141a77f44aacf547b8bc212e5c1f5ae57",
+        "bytes": 1989
+      },
+      {
+        "file": "pyproject.toml",
+        "sha256": "12cdb7f23d767df1ab52445cf47d8424739533883fa4ce98bf4b1a78157706c5",
+        "bytes": 963
+      },
+      {
+        "file": "src/__init__.py",
+        "sha256": "36fc42fa5470e64728db826657fb68c333910362bd8101d94416622e74865bc6",
+        "bytes": 87
+      },
+      {
+        "file": "src/data/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "file": "src/data/prune_ledger.json",
+        "sha256": "330cf43de48b11b86d066946a9389e6a28657866d57f92482eaa27bc6e11e645",
+        "bytes": 635
+      },
+      {
+        "file": "src/data/router_rules.json",
+        "sha256": "85903d28fbe247e5d97564ddca47a780990d30a047f9bf8cedd05dacd3e3e15a",
+        "bytes": 9672
+      },
+      {
+        "file": "src/data/router_test_cases.json",
+        "sha256": "8d8c49ed1541d217166e07c202f3f26c4006e751c4df1bdf8eaf565b03f7e0ce",
+        "bytes": 2434
+      },
+      {
+        "file": "src/data/skill_states.json",
+        "sha256": "28850c7b0e5d76d30a595619d80916c41314f49d1bcda351028b45d0e91be271",
+        "bytes": 1123
+      },
+      {
+        "file": "src/pruner/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "file": "src/pruner/pruner.py",
+        "sha256": "cba623a2a256a41e0d1f06b68896aa3267201b0e5519e36085ef1f09e1cc9d72",
+        "bytes": 8611
+      },
+      {
+        "file": "src/router/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "file": "src/router/generator.py",
+        "sha256": "aca9d1c3c53f2246c4c17b0bfa015121630c6ad22e2a904d1d7338db82d72b9f",
+        "bytes": 11093
+      },
+      {
+        "file": "src/store/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "file": "src/store/chain_store.py",
+        "sha256": "bfee4275d866e94ffaa434a9e8ec9a822fc8f59ad5dfbfd45af044a8449acb20",
+        "bytes": 5187
+      },
+      {
+        "file": "src/verifier/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "file": "src/verifier/verifier.py",
+        "sha256": "58cd8e9a0651fd92b9dcbfaa3ef19bfbe63bb77aa4f3dc564e721246b94a1b95",
+        "bytes": 5028
+      },
+      {
+        "file": "tests/test_chain_store.py",
+        "sha256": "fff5b0ac6b383497bf050e244f8308d9bd6faa49b2e6a101f40beada9dd4cff8",
+        "bytes": 3597
+      },
+      {
+        "file": "tests/test_generator.py",
+        "sha256": "1251855b7bed1e05eccb077ee82a5795d131bcc63b162c019f2c9b2037c8ff7c",
+        "bytes": 2384
+      },
+      {
+        "file": "tests/test_pruner.py",
+        "sha256": "95e00182180fe323edfce7a1dfcfb114756a415db2cbd96f423076dd6aea5cf1",
+        "bytes": 3724
+      },
+      {
+        "file": "tests/test_verifier.py",
+        "sha256": "c007335d30d2569141f94cfbf6ed13813b9fbceab6d64269e0315213c780cbe4",
+        "bytes": 1091
+      }
+    ]
+  },
+  {
+    "sig_id": "SIG-20260808-003b",
+    "artifact": "skill-chain-paradigm v0.2.0 (bilingual sign-off supplement)",
+    "signed_at": "2026-08-08 14:41:12",
+    "signer": "Dr.Z's AI Company (Executive Director authorization)",
+    "seal": "👑",
+    "note": "双语规范补强: SIGNATURE-EN.md新增·SIGNATURE.md中文说明补足·签章清单同步",
+    "files": 59,
+    "total_bytes": 1411742,
+    "sha256_manifest": [
+      {
+        "file": ".gitignore",
+        "sha256": "f4aaefdd72228c2eae4b0c083026237b1acd3ae8d31364f808ebdf1c4eafa67b",
+        "bytes": 73
+      },
+      {
+        "file": "CHANGELOG-EN.md",
+        "sha256": "275f7ce04b363d741bb93bb9735baabcce06a1c539ac1a2e4a3a8a2c35eb506d",
+        "bytes": 2095
+      },
+      {
+        "file": "CHANGELOG.md",
+        "sha256": "edac0d286a54ce1c1e30ddf808ca49dedfd9280dfd22c264e32bbe35866ddb88",
+        "bytes": 2346
+      },
+      {
+        "file": "CODE_OF_CONDUCT-EN.md",
+        "sha256": "5025a8f167178e2d3e744d4c50b7c7f41e8757eafbf6b610f2556f690f874cff",
+        "bytes": 1399
+      },
+      {
+        "file": "CODE_OF_CONDUCT.md",
+        "sha256": "1e2364a84828389efc47d80d6bf26824c6014bc2194105c59ce3415761f12e35",
+        "bytes": 1135
+      },
+      {
+        "file": "CONTRIBUTING-EN.md",
+        "sha256": "5726e2e0cc5edac61ba41fa0d26b0c80533d953dc6032c62714f97f839151b8f",
+        "bytes": 2815
+      },
+      {
+        "file": "CONTRIBUTING.md",
+        "sha256": "686d9f1f5df30fd2cca911c7314f3c3305454d5c70d58b8e0a9f60b21731af7f",
+        "bytes": 2778
+      },
+      {
+        "file": "LICENSE",
+        "sha256": "bd6f3df8922e0c287f7ee912a65c997b4ed2d0b6778f874ffdafb6851857fbbf",
+        "bytes": 1095
+      },
+      {
+        "file": "README-EN.md",
+        "sha256": "8dac4a45bbc3a8fc510a31b8f437b11743c033623f979d443ae536f68937d6ab",
+        "bytes": 15335
+      },
+      {
+        "file": "README.md",
+        "sha256": "794aad88d3f657673ff8c079cf4236400e57199e4c6d1d754f6bed4fc069bebf",
+        "bytes": 14765
+      },
+      {
+        "file": "SECURITY-EN.md",
+        "sha256": "1ad79537488d7af7c180b81de6285b417890ce8dbbdeaf40d80c5d58c5e267c1",
+        "bytes": 919
+      },
+      {
+        "file": "SECURITY.md",
+        "sha256": "4cb013b69e4d3683b039d1cb9577279afe91a3318fc2160249e8c0a8d346a521",
+        "bytes": 815
+      },
+      {
+        "file": "SIGNATURE-EN.md",
+        "sha256": "84ad509522571c2e25f4bda2cce4794835bf4b4e3f5afa0dc8fd829a3156f1b6",
+        "bytes": 3827
+      },
+      {
+        "file": "SIGNATURE.md",
+        "sha256": "bdf3a291076e1fa86328c4273401247dfabad3ab8f30b04bc07e31d1210ea4ba",
+        "bytes": 4316
+      },
+      {
+        "file": "TESTING-REPORT-EN.md",
+        "sha256": "223d2aba4a72f0856f957bc145af784352848fb47496be9bb4f31424cff432b0",
+        "bytes": 3181
+      },
+      {
+        "file": "TESTING-REPORT.md",
+        "sha256": "3181469d08c1937f34433cb6effa8e0293149e6e50e427a00aa97ab97b952f08",
+        "bytes": 3191
+      },
+      {
+        "file": "docs/architecture/README-EN.md",
+        "sha256": "c516e7645b94266d7d9500ada8d1558eb59f0e53fdc58c72b640dfc39fb7d4e9",
+        "bytes": 2223
+      },
+      {
+        "file": "docs/architecture/README.md",
+        "sha256": "2b3ac0c072635fd4dee84a9039519346b5c452aa884b0bc7614227ffc2103d65",
+        "bytes": 3620
+      },
+      {
+        "file": "docs/architecture/chain-lifecycle-EN.md",
+        "sha256": "a39d769964b199084411af9b25a1f19999b8b2bec176901219c34a4089132889",
+        "bytes": 1341
+      },
+      {
+        "file": "docs/architecture/chain-lifecycle.md",
+        "sha256": "941716b016914011d4d0d75173ae95db1362e6bd16dc6ff5a0177efc3e7af9d1",
+        "bytes": 2199
+      },
+      {
+        "file": "docs/architecture/pruning-EN.md",
+        "sha256": "25a3fa21966b5cb2fcb00dcc1fe8717d5bac3df682dbdde616332bb02321d2ee",
+        "bytes": 1412
+      },
+      {
+        "file": "docs/architecture/pruning.md",
+        "sha256": "81d44379a64d81db303c10600fd819f039a92278d8500bbe08ec5393bbf29a93",
+        "bytes": 2656
+      },
+      {
+        "file": "docs/architecture/routing-EN.md",
+        "sha256": "3d64d6d924ba52305430fcb4b3dd986fa1d6788b0d7ee7a681aad0df6d75f1ea",
+        "bytes": 1888
+      },
+      {
+        "file": "docs/architecture/routing.md",
+        "sha256": "093e3fc4cdfd853eb871e473ec88572adb24f11f8decd0eed2fd67e13a4a3c06",
+        "bytes": 2780
+      },
+      {
+        "file": "docs/architecture/verification-EN.md",
+        "sha256": "80a33eccada7ce922b68cd8181fbabc26453a40fc6bfeb083a2ab5e2aa46af37",
+        "bytes": 1081
+      },
+      {
+        "file": "docs/architecture/verification.md",
+        "sha256": "4157fb4eef51747244d9496544d5be69b8b28276ccabdfc24e138237de39c468",
+        "bytes": 1580
+      },
+      {
+        "file": "docs/fig1-architecture.svg",
+        "sha256": "671997811532fe1d35673ea0409546e8623e07c691f13256da4ea2bcec2ac6fb",
+        "bytes": 4444
+      },
+      {
+        "file": "docs/fig2-closed-loop.svg",
+        "sha256": "917dc3b0aa137e4b0b0189178e55b00982ed90b233289979e7d81aa1dfce1705",
+        "bytes": 5320
+      },
+      {
+        "file": "docs/fig3-state-machine.svg",
+        "sha256": "1624a1378da0888ea695b86ec1032ac0c79de0a3117595839430f6bb6f3e7075",
+        "bytes": 3632
+      },
+      {
+        "file": "docs/fig4-ecosystem.svg",
+        "sha256": "8b71e9ccb78ef7ee2da879a497fbbf9ce83f9f8f0dd02d14ac22688f14868eb0",
+        "bytes": 3877
+      },
+      {
+        "file": "docs/getting-started/README-EN.md",
+        "sha256": "ae2ac6f786aa5d3dc0e98bc93d4f735cfbb5c9a9629b81c1f41e8821bf45bb54",
+        "bytes": 1696
+      },
+      {
+        "file": "docs/getting-started/README.md",
+        "sha256": "2cc993285d1dff461cb8037c35f186d8cbd2a4feab6a123c2cf8504464b95292",
+        "bytes": 3100
+      },
+      {
+        "file": "docs/logo.png",
+        "sha256": "5befa175cdfff3c9604e7512de4cc4a25d5114b96249e751e9c6944820378342",
+        "bytes": 105609
+      },
+      {
+        "file": "docs/visual-preview-small.jpg",
+        "sha256": "c59e207b68ee34be3aa71cfd12bc081cdfec5022821442514070059a65accc5c",
+        "bytes": 154395
+      },
+      {
+        "file": "docs/visual-preview.html",
+        "sha256": "9fe965b3ebf630a4bf93cbe57524645a319635aff310e8d359c7ff9df76643d7",
+        "bytes": 22055
+      },
+      {
+        "file": "docs/visual-preview.png",
+        "sha256": "40b6243098fa3af854cf963bfc624905ef4b024a983c070f9eb30134e0225de2",
+        "bytes": 958197
+      },
+      {
+        "file": "examples/delegation_chain.py",
+        "sha256": "2c370fbaf4b8a180a7cf3789ebd96f5d18f273ee7a6211e0d259edd5a8475505",
+        "bytes": 977
+      },
+      {
+        "file": "examples/single_skill_chain.py",
+        "sha256": "9172465d8ba8a5f04d7dd4540a80e6d410526042444896acd030dbf7ef2a80e6",
+        "bytes": 1038
+      },
+      {
+        "file": "examples/skills.example.json",
+        "sha256": "44abae34eda2966e78c2489dfbb7e37141a77f44aacf547b8bc212e5c1f5ae57",
+        "bytes": 1989
+      },
+      {
+        "file": "pyproject.toml",
+        "sha256": "12cdb7f23d767df1ab52445cf47d8424739533883fa4ce98bf4b1a78157706c5",
+        "bytes": 963
+      },
+      {
+        "file": "signature-log.json",
+        "sha256": "7f8e7d93988202f2654f074630098b77873424fdcd0a861511ee9130b6c47324",
+        "bytes": 8919
+      },
+      {
+        "file": "src/__init__.py",
+        "sha256": "36fc42fa5470e64728db826657fb68c333910362bd8101d94416622e74865bc6",
+        "bytes": 87
+      },
+      {
+        "file": "src/data/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "file": "src/data/prune_ledger.json",
+        "sha256": "330cf43de48b11b86d066946a9389e6a28657866d57f92482eaa27bc6e11e645",
+        "bytes": 635
+      },
+      {
+        "file": "src/data/router_rules.json",
+        "sha256": "85903d28fbe247e5d97564ddca47a780990d30a047f9bf8cedd05dacd3e3e15a",
+        "bytes": 9672
+      },
+      {
+        "file": "src/data/router_test_cases.json",
+        "sha256": "8d8c49ed1541d217166e07c202f3f26c4006e751c4df1bdf8eaf565b03f7e0ce",
+        "bytes": 2434
+      },
+      {
+        "file": "src/data/skill_states.json",
+        "sha256": "28850c7b0e5d76d30a595619d80916c41314f49d1bcda351028b45d0e91be271",
+        "bytes": 1123
+      },
+      {
+        "file": "src/pruner/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "file": "src/pruner/pruner.py",
+        "sha256": "cba623a2a256a41e0d1f06b68896aa3267201b0e5519e36085ef1f09e1cc9d72",
+        "bytes": 8611
+      },
+      {
+        "file": "src/router/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "file": "src/router/generator.py",
+        "sha256": "aca9d1c3c53f2246c4c17b0bfa015121630c6ad22e2a904d1d7338db82d72b9f",
+        "bytes": 11093
+      },
+      {
+        "file": "src/store/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "file": "src/store/chain_store.py",
+        "sha256": "bfee4275d866e94ffaa434a9e8ec9a822fc8f59ad5dfbfd45af044a8449acb20",
+        "bytes": 5187
+      },
+      {
+        "file": "src/verifier/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "file": "src/verifier/verifier.py",
+        "sha256": "58cd8e9a0651fd92b9dcbfaa3ef19bfbe63bb77aa4f3dc564e721246b94a1b95",
+        "bytes": 5028
+      },
+      {
+        "file": "tests/test_chain_store.py",
+        "sha256": "fff5b0ac6b383497bf050e244f8308d9bd6faa49b2e6a101f40beada9dd4cff8",
+        "bytes": 3597
+      },
+      {
+        "file": "tests/test_generator.py",
+        "sha256": "1251855b7bed1e05eccb077ee82a5795d131bcc63b162c019f2c9b2037c8ff7c",
+        "bytes": 2384
+      },
+      {
+        "file": "tests/test_pruner.py",
+        "sha256": "95e00182180fe323edfce7a1dfcfb114756a415db2cbd96f423076dd6aea5cf1",
+        "bytes": 3724
+      },
+      {
+        "file": "tests/test_verifier.py",
+        "sha256": "c007335d30d2569141f94cfbf6ed13813b9fbceab6d64269e0315213c780cbe4",
+        "bytes": 1091
+      }
+    ],
+    "sig_md_sha256": "0fee12b8601248777ae074facc89b839283f3a156160b424860906a2570e64dc"
+  },
+  {
+    "sig_id": "SIG-20260808-004",
+    "artifact": "skill-chain-paradigm v0.3.0 (local release candidate)",
+    "signed_at": "2026-08-10 01:01:27",
+    "signer": "Dr.Z's AI Company (Executive Director authorization)",
+    "seal": "👑",
+    "note": "0.3.0: 本地21:54基线同步+混淆词对库+稳定性协议+泄露清除（绝对路径可配置化）+P2验证闭环22/22+路径修复",
+    "files": 70,
+    "total_bytes": 1458764,
+    "sha256_root": "dc2e5d14b67883a829b1ed83995dfc6c51e28e0b487fc2ce195d89c76e465e12"
+  },
+  {
+    "sig_id": "SIG-20260811-005",
+    "artifact": "skill-chain-paradigm v0.3.0 (leak-cleaned release)",
+    "signed_at": "2026-08-11 17:02:14",
+    "signer": "Dr.Z's AI Company (Executive Director authorization)",
+    "seal": "👑",
+    "note": "发布前置检查清理: 签名文件人名→Executive Director·链库内部词→通用·重扫零命中·pytest全过",
+    "files": 70,
+    "total_bytes": 1463033,
+    "sha256_root": "dd3c6d9e47ab8d9b0e198a73b8300262b73393ebf3d310b769b3e12d281c81c5"
+  }
+]

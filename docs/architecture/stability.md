@@ -21,7 +21,7 @@
 ## 三、阈值校准协议（拒绝魔法数）
 
 - 全参数可校准（触发θ_t/边权重θ_e/K_max/共识θ_c/独立性θ_i/锚点α/桥β/学习率η）
-- 触发: router_log ≥30条 或 覆盖关键点 ≥10个 → 首校
+- Trigger: router_log ≥30 entries or covering ≥10 anchors → first calibration
 - 纪律: 参数调整必附数据依据·调整记录入router_log·可回滚
 
 ## 四、SoT式注入（预演-修剪-注入·Harness化）

@@ -11,7 +11,7 @@ import sys
 from datetime import datetime
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-LOG_FP = os.path.join(BASE, "..", "data", "router_log.jsonl")  # single source of truth (router_log)
+LOG_FP = os.environ.get("CHAIN_LOG_FP", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "router_log.jsonl"))  # 2026-08-08合并: 唯一数据源=03-产出/技能链落地/router_log.jsonl
 
 def verify_task_completion(artifact_path, status_field=None):
     """信号1: 任务是否有明确完成的产物/状态（文件存在+状态字段）"""
@@ -90,7 +90,7 @@ def main():
 def selftest():
     """自测（R1·2026-08-08）: 三信号PASS/FAIL分支"""
     import tempfile
-    tf = os.path.join(tempfile.gettempdir(), "host-verify-v.txt")
+    tf = os.path.join(tempfile.gettempdir(), "chain-verify-v.txt")
     open(tf, "w").write("x")
     assert verify_artifact_exists(tf)["value"] is True
     assert verify_artifact_exists(tf + ".no")["value"] is False

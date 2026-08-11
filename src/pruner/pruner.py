@@ -14,10 +14,10 @@ import os
 from datetime import datetime
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-RULES_FP = os.path.join(BASE, "..", "data", "router_rules.json")
-LOG_FP = os.path.join(BASE, "..", "data", "router_log.jsonl")
-STATES_FP = os.path.join(BASE, "..", "data", "skill_states.json")
-LEDGER_FP = os.path.join(BASE, "..", "data", "prune_ledger.json")
+RULES_FP = os.path.join(BASE, "router_rules.json")
+LOG_FP = os.path.join(BASE, "router_log.jsonl")
+STATES_FP = os.path.join(BASE, "skill_states.json")
+LEDGER_FP = os.path.join(BASE, "prune_ledger.json")
 
 def load_rules():
     with open(RULES_FP, "r", encoding="utf-8") as f:

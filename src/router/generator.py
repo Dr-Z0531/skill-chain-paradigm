@@ -8,15 +8,15 @@ chain_generator.py · 技能链生成器 v1（范式7.1落地·2026-08-07）
 """
 import json
 import os
-import re
 import sys
+import re
 import uuid
 from datetime import datetime
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-RULES_FP = os.path.join(BASE, "..", "data", "router_rules.json")
-CHAIN_STORE_FP = os.path.join(BASE, "..", "data", "chain_store.json")
-LOG_FP = os.path.join(BASE, "..", "data", "router_log.jsonl")  # single source of truth (router_log)
+RULES_FP = os.environ.get("CHAIN_RULES_FP", os.path.join(BASE, "..", "data", "router_rules.json"))
+CHAIN_STORE_FP = os.environ.get("CHAIN_STORE_FP", os.path.join(BASE, "..", "data", "chain_store.json"))
+LOG_FP = os.environ.get("CHAIN_LOG_FP", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "router_log.jsonl"))  # 2026-08-08合并: 唯一数据源=03-产出/技能链落地/router_log.jsonl
 
 SYNONYM_BRIDGE = {
     # 用户高频说法 -> 锚点语（R1.5·仅归一化·非独立路由）·短语级优先·防误触
@@ -122,9 +122,9 @@ def _load_longtail_index():
     if _LONGTAIL_INDEX is not None:
         return _LONGTAIL_INDEX
     idx = {}
-    # 长尾索引目录（开源可配置: 环境变量SKILL_CHAIN_SKILLS_ROOT·默认相对hostDate）
-    skills_root = os.environ.get("SKILL_CHAIN_SKILLS_ROOT",
-                                 os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", "..", "hostDate", "skills"))
+    # Long-tail skill index root (configurable: env SKILLS_ROOT, default relative)
+    skills_root = os.environ.get(
+        "SKILLS_ROOT", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", "skills"))
     for root, dirs, files in os.walk(skills_root):
         if "SKILL.md" in files:
             fp = os.path.join(root, "SKILL.md")
@@ -161,7 +161,7 @@ def build_chain(text, rules):
         return {"chain_id": None, "error": "no_route", "detail": r}
     main = r["selected"][0]
     chain = [main["name"]]
-    # 支持/验证技能: 范式协议E→R→G→X→V→Log中V验证=每链必有（2026-08-08protocol refinement: 原实现只在文本含"验证/可靠"时追加→实际全单链）
+    # 支持/验证技能: 范式协议E→R→G→X→V→Log中V验证=每链必有（2026-08-08 review correction: verifier must be appended to every chain, not only when the text contains verification keywords）
     # 标准链=主技能+验证技能(length=2)·除非主技能本身是验证类
     if main["name"] != "skill-verification":
         chain.append("skill-verification")
